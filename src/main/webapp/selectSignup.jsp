@@ -27,7 +27,7 @@
 				
 				<div class="col-lg-4 col-md-2">
 					<i class="fas fa-user-tie"></i>
-					<h4>Skilled Labor</h4>
+					<h4>Pharmasist</h4>
 					<p>
 					Sign up
 						<a href="pharmRegister.jsp">here
@@ -40,7 +40,7 @@
 
 				<div class="col-lg-4 col-md-2">
 					<i class="fas fa-user-md"></i>
-					<h4>Professional</h4>
+					<h4>Doctor</h4>
 					<p>
 					Sign up
 						<a href="docRegister.jsp">here

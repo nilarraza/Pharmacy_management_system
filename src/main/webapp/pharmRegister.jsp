@@ -15,7 +15,7 @@
          <form  class="form-register"  class="form-register col-10" method="post" action="addPharmasist">
              <fieldset class="border p-2"> 
                  
-                 <legend  class="w-auto"> Skilled Labor Registration</legend>
+                 <legend  class="w-auto">Pharmasist Registration</legend>
                
                     <input type="text" class="form-control" placeholder="Contact Number" name="contactNo"  maxlength="12" minlength="10" pattern="^[a-zA-Z0-9_.-]*$"  title="please enter a valid contact number" required autofocus><br>
                     <input type="email" name="email" class="form-control" placeholder="Email address" title="eg:john@gmail.com" required autofocus><br>

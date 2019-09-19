@@ -12,20 +12,19 @@
     
 <body class="text-center">
             
-         <form  class="form-register"  class="form-register col-10" method="post" action="Drugs/addDrugs">
+         <form   class="form-register"  class="form-register col-10" method="post" action="addDrugs" enctype="multipart/form-data">
              <fieldset class="border p-2"> 
                  
                  <legend  class="w-auto"> r Registration</legend>
-               
-                    <input type="text" class="form-control" placeholder="name" name="name"  required autofocus><br>
-                    <input type="text" name="dosage" class="form-control" placeholder="dosage"  required autofocus><br>
+                	
+                    <input type="text" class="form-control" placeholder="name" name="name"  required autofocus><br>                   
                     <input type="text" name="description" class="form-control" placeholder="description" required autofocus><br>
-                    <input type="text" name="price" class="form-control" placeholder="price" required autofocus><br>
-                    <input type="text" name="availability" class="form-control" placeholder="availability" required autofocus><br>
-                    <input type="text" name="genericName" class="form-control" placeholder="genericName"><br>                
+                     <input type="text" name="price" class="form-control" placeholder="price" required autofocus><br>
+                    <input type="text" name="availability" class="form-control" placeholder="availability" required autofocus><br>                                       
+                     <input type="file" name="drugimg" class="form-control" placeholder="upload image"><br>             
                  
                  
-                 <button type="submit" class="btn btn-outline-primary btn-lg btn-block">add </button><br><br>
+                 <button type="submit" name="submit" value="Add Drug" class="btn btn-outline-primary btn-lg btn-block">add </button><br><br>
                
                  
             </fieldset>

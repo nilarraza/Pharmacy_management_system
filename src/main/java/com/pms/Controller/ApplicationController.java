@@ -1,12 +1,21 @@
 package com.pms.Controller;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.pms.service.DrugService;
+
 @Controller
 public class ApplicationController {
+	
+	@Autowired
+	DrugService drugService;
 
 	@RequestMapping("/dashBoard")
 	public String userProcess() {
@@ -24,6 +33,20 @@ public class ApplicationController {
 
 		
 		return "login.jsp";
+	}
+	
+	@GetMapping("/PharShowPresDrug")
+	public String PharShowPresDrugs(HttpServletRequest req) {
+		req.setAttribute("drugs",drugService.findAllPresDrugs());
+		return "ShowDrugs.jsp";
+		
+	}
+	
+	@GetMapping("/CustShowPresDrug")
+	public String CustShowPresDrugs(HttpServletRequest req) {
+		req.setAttribute("drugs",drugService.findAllPresDrugs());
+		return "Customer.jsp";
+		
 	}
 	
 //	@RequestMapping(value = "/logout", method = RequestMethod.GET)
