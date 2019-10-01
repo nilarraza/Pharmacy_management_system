@@ -224,6 +224,8 @@
     <!-- Page content -->
     
     <h3>${msg}</h3>
+    <br>
+    <hr>
     
      <table class="table table-striped">
 		<thead>
