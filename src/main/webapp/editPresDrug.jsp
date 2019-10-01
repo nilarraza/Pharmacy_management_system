@@ -12,19 +12,19 @@
     
 <body class="text-center">
             
-         <form   class="form-register" name="form1"  class="form-register col-10" method="post" action="UpdatePDrugs" enctype="multipart/form-data">
+         <form   class="form-register" name="form1"  class="form-register col-10" method="post" action="updatePresDrug" >
              <fieldset class="border p-2"> 
                  
                  <legend  class="w-auto">  Registration</legend>
-                	
-                    <input type="text" class="form-control" placeholder="name" name="name" value="${drug.name}"  required autofocus><br>
-                    <input type="text" name="dosage" class="form-control" placeholder="dosage" value="${drug.dosage}" required autofocus><br>
+                	<input type="text" class="form-control" placeholder="id" name="id" value="${drug.id}" readonly required autofocus><br>          
+                    <input type="text" class="form-control" placeholder="name" name="name" value="${drug.name}"  required autofocus><br>          
                     <input type="text" name="description" class="form-control" placeholder="description" value="${drug.description}" required autofocus><br>
                      <input type="text" name="price" class="form-control" placeholder="price" value="${drug.price}" required autofocus><br>
                     <input type="text" name="availability" class="form-control" placeholder="availability" value="${drug.availability}" required autofocus><br>                     
-                    <input type="text" name="genericName" class="form-control" placeholder="genericName" value="${drug.genericName}"><br> 
-                     <input type="file" name="drugimg" class="form-control" placeholder="upload image" value="C:\spring Workspace\PMS\src\main\webapp\img\+${drug.url}")><br>             
-                 
+                  
+                     <img src="./img/${drug.url}" style="height: 50; width: 60">            
+                 	 <input type="text" name="url" class="form-control" placeholder="url" value="${drug.url}" readonly required autofocus><br>                     
+                  
                  
                  <button type="submit"  name="submit" value="Add Drug" class="btn btn-outline-primary btn-lg btn-block">add </button><br><br>
                

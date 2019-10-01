@@ -118,8 +118,8 @@
         <!-- Navigation -->
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="ni ni-tv-2 text-dark"></i> Dashboard
+            <a class="nav-link" href="/CustShowNonPresDrug">
+              <i class="fas fa-boxes"></i> General Drugs
             </a>
           </li>
           <li class="nav-item">
@@ -127,7 +127,7 @@
               <i class="fas fa-pills"></i> Prescription Drugs
             </a>
           </li>
-         
+          
           <li class="nav-item">
             <a class="nav-link" href="./examples/profile.html">
               <i class="ni ni-single-02 text-yellow"></i> User profile

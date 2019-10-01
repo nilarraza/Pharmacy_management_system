@@ -17,6 +17,15 @@ public class Person {
 	protected Date dob;
 	protected String username;
 	protected String password;
+	
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
 
 	public String getContactNo() {
 		return contactNo;
@@ -66,10 +75,12 @@ public class Person {
 		this.password = password;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "Person [contactNo=" + contactNo + ", email=" + email + ", nic=" + nic + ", dob=" + dob + ", username="
-				+ username + ", password=" + password + "]";
+		return "Person [user_id=" + user_id + ", contactNo=" + contactNo + ", email=" + email + ", nic=" + nic
+				+ ", dob=" + dob + ", username=" + username + ", password=" + password + "]";
 	}
 
 	public Person(int user_id, String contactNo, String email, String nic, Date dob, String username, String password) {

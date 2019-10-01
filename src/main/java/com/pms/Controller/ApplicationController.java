@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.pms.dao.PersonRepository;
+import com.pms.model.Person;
 import com.pms.service.DrugService;
 
 @Controller
@@ -16,6 +18,8 @@ public class ApplicationController {
 	
 	@Autowired
 	DrugService drugService;
+	@Autowired
+	PersonRepository presonRepo;
 
 	@RequestMapping("/dashBoard")
 	public String userProcess() {
@@ -42,12 +46,37 @@ public class ApplicationController {
 		
 	}
 	
+	@GetMapping("/PharShowNonPresDrug")
+	public String PharShowNonPresDrugs(HttpServletRequest req) {
+		req.setAttribute("drugs",drugService.findAllNonPresDrugs());
+		return "ShowDrugs.jsp";
+		
+	}
+	
 	@GetMapping("/CustShowPresDrug")
 	public String CustShowPresDrugs(HttpServletRequest req) {
 		req.setAttribute("drugs",drugService.findAllPresDrugs());
 		return "Customer.jsp";
 		
 	}
+	
+	@GetMapping("/CustShowNonPresDrug")
+	public String CustShowNonPresDrugs(HttpServletRequest req) {
+		req.setAttribute("drugs",drugService.findAllNonPresDrugs());
+		return "Customer.jsp";
+		
+	}
+	
+	@GetMapping("/success")
+	public String LoginSuccess(Person person ) {
+		
+		System.out.println(person);
+		return "Customer.jsp";
+		
+	}
+	
+	
+	
 	
 //	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 //	public String logout(Model model, String error, String logout) {

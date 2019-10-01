@@ -128,7 +128,9 @@ public class DrugsController {
 	@GetMapping("/showUpdatePres")
 	public String showUpdate(@RequestParam("id") int id, ModelMap modelmap) {
 		PresDrugs drug = presdrugRepo.findById(id).get();
+		System.out.println(drug.getName());
 		modelmap.addAttribute("drug", drug);
+		
 
 		return "editPresDrug.jsp";
 
@@ -138,7 +140,7 @@ public class DrugsController {
 	public String updateDrug(PresDrugs one) {
 
 		presdrugRepo.save(one);
-		return "ShowDrug";
+		return "redirect:/PharShowPresDrug";
 
 	}
 	

@@ -37,7 +37,7 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="./index.html">
-        <img src="img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <img src="./img/medixlogo.png" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -107,28 +107,31 @@
           </div>
         </div>
         <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
-          <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <span class="fa fa-search"></span>
-              </div>
-            </div>
-          </div>
-        </form>
+       
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="ni ni-tv-2 text-primary"></i> Dashboard
+            <a class="nav-link" href="/PharShowPresDrug">
+              <i class="fas fa-pills"></i>Prescription Drugs
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/PharShowNonPresDrug">
+              <i class="fas fa-boxes"></i>General Drugs
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/adddrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add Drugs
+              <i class="ni ni-tv-2 text-primary"></i> Add Prescription Drugs
             </a>
           </li>
+          
+               <li class="nav-item">
+            <a class="nav-link" href="/addNonPresDrugs.jsp">
+              <i class="ni ni-tv-2 text-primary"></i> Add General Drugs
+            </a>
+          </li>
+         
          
           <li class="nav-item">
             <a class="nav-link" href="./examples/profile.html">
@@ -156,20 +159,14 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
-     
-        
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
                  <!-- Form -->
-                <form class="form-inline md-form mr-auto mb-4" action="/searchDrug">
+                 
+                  <form class="form-inline md-form mr-auto mb-4" action="/searchDrug">
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
-            </div>
-          </div>
-        
+               
+           
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
@@ -179,7 +176,7 @@
                   <img alt="Image placeholder" src="img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                  <span class="mb-0 text-sm  font-weight-bold text-dark">Jessica Jones</span>
                 </div>
               </div>
             </a>

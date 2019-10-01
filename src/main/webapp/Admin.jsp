@@ -111,31 +111,38 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/PharShowPresDrug">
-              <i class="ni ni-tv-2 text-primary"></i>Prescription Drugs
+            <a class="nav-link" href="/listCustomers">
+              <i class="fas fa-users"></i>List Customers
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/PharShowNonPresDrug">
-              <i class="ni ni-tv-2 text-primary"></i>General Drugs
+            <a class="nav-link" href="/listPharmasist">
+              <i class="fas fa-user-tie"></i>List Pharmasist
             </a>
           </li>
-         <li class="nav-item">
-            <a class="nav-link" href="/adddrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add Prescription Drugs
+          <li class="nav-item">
+            <a class="nav-link" href="/listDoctors">
+              <i class="fas fa-user-md"></i> List Doctors
             </a>
           </li>
           
-               <li class="nav-item">
-            <a class="nav-link" href="/addNonPresDrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add General Drugs
+           <li class="nav-item">
+            <a class="nav-link" href="/custRegister.jsp">
+              <i class="ni ni-tv-2 text-primary"></i>Add Customers
             </a>
           </li>
-         
           <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
+            <a class="nav-link" href="/pharmRegister.jsp">
+              <i class="ni ni-tv-2 text-primary"></i>Add Pharmasist
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/docRegister.jsp">
+              <i class="ni ni-tv-2 text-primary"></i> Add Doctors
+            </a>
+          </li>
+          
+        
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./examples/tables.html">
@@ -160,7 +167,7 @@
         <!-- Brand -->
                  <!-- Form -->
                  
-                  <form class="form-inline md-form mr-auto mb-4" action="/searchDrug">
+                  <form class="form-inline md-form mr-auto mb-4" action="/searchPerson">
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
@@ -214,31 +221,56 @@
       <div class="container-fluid">
         <div class="header-body">
           </div>
-          
     <!-- Page content -->
     
+    <h3>${msg}</h3>
     
-      <form   class="form-register"  class="form-register col-10" method="post" action="addNonPresDrugs" enctype="multipart/form-data">
-             <fieldset class="border p-2"> 
-                 
-                 <legend  class="w-auto">Add Non-Prescription Drugs</legend>
-                	
-                    <input type="text" class="form-control" placeholder="name" name="name"  required autofocus><br>                   
-                    <input type="text" name="description" class="form-control" placeholder="description" required autofocus><br>
-                     <input type="text" name="price" class="form-control" placeholder="price" required autofocus><br>
-                    <input type="text" name="availability" class="form-control" placeholder="availability" required autofocus><br>                                       
-                     <input type="file" name="drugimg" class="form-control" placeholder="upload image"><br>             
-                 
-                 
-                 <button type="submit" name="submit" value="Add Drug" class="btn btn-primary">Save Drug </button><br><br>
-               
-                 
-            </fieldset>
-         </form>
-    
+     <table class="table table-striped">
+		<thead>
+			<tr>
+				<th>User_Id</th>
+				<th>Email</th>
+				<th>Contact No</th>
+				<th>NIC</th>
+				<th>DOB</th>
+				<th>Role</th>
+				<th>Username</th>
+				<th>Password</th>				
+				<th>Delete</th>
+				
+				
+				
+
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="person" items="${person }">
+				<tr>
+					<td>${person.user_id}</td>
+					<td>${person.email}</td>
+					<td>${person.contactNo}</td>
+					<td>${person.nic}</td>
+					<td>${person.dob}</td>
+					<td>${person.role}</td>
+					<td>${person.username}</td>
+					<td>${person.password}</td>					
+					<td><a href="/deletePerson?id=${person.user_id}"><i class="fas fa-trash-alt"></i></i></td>
+			
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
           
-     </div>
-     </div>
+          
+          
+        
+          
+          
+    
+        </div> 
+      </div>
+    </div>
+      
   
   <!-- Argon Scripts -->
   <!-- Core -->
