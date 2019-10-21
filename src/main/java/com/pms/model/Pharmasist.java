@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 public class Pharmasist extends Person {
 
 	private String pharmaRegNo;
-	private String role;
+	
 
 	public Pharmasist() {
 		super();
@@ -24,7 +24,7 @@ public class Pharmasist extends Person {
 		super.dob = dob;
 		super.username = username;
 		super.password = password;
-		this.role=role;
+		super.role=role;
 		this.pharmaRegNo=pharmaRegNo;
 	}
 
@@ -36,12 +36,6 @@ public class Pharmasist extends Person {
 		this.pharmaRegNo = pharmaRegNo;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
+	
 
 }

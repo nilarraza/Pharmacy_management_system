@@ -7,14 +7,15 @@ import javax.persistence.Entity;
 @Entity
 public class Doctor  extends Person{
 	private String slmcNo;
-	private String role;
+	
 	
 	public Doctor() {
 		super();
 	}
-	public Doctor( String role,int user_id, String contactNo,String slmcNo, String email, String nic, Date dob, String username,
-			String password) {
-		super();
+	
+
+	public Doctor(int user_id, String contactNo, String email, String nic, Date dob, String username, String password,
+			String role, String slmcNo) {
 		super.user_id = user_id;
 		super.contactNo = contactNo;
 		super.email = email;
@@ -22,10 +23,10 @@ public class Doctor  extends Person{
 		super.dob = dob;
 		super.username = username;
 		super.password = password;
-		this.role=role;
-		this.slmcNo=slmcNo;
-		
+		super.role = role;
+		this.slmcNo = slmcNo;
 	}
+
 
 	public String getSlmcNo() {
 		return slmcNo;
@@ -35,16 +36,11 @@ public class Doctor  extends Person{
 		this.slmcNo = slmcNo;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
+	
+	
 	@Override
 	public String toString() {
-		return "Doctor [slmcNo=" + slmcNo + ", role=" + role + "]";
+		return "Doctor [slmcNo=" + slmcNo + "]";
 	}
 
 }
