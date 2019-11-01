@@ -25,18 +25,7 @@
 			<h2>Signup As</h2>		
 			<div class="row">
 				
-				<div class="col-lg-4 col-md-2">
-					<i class="fas fa-user-tie"></i>
-					<h4>Pharmasist</h4>
-					<p>
-					Sign up
-						<a href="pharmRegister.jsp">here
-							</a>
-					</p>
-					
-					
-
-				</div>
+				
 
 				<div class="col-lg-4 col-md-2">
 					<i class="fas fa-user-md"></i>

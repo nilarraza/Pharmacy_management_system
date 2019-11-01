@@ -26,7 +26,7 @@
                  	 <input type="text" name="url" class="form-control" placeholder="url" value="${drug.url}" readonly required autofocus><br>                     
                   
                  
-                 <button type="submit"  name="submit" value="Add Drug" class="btn btn-outline-primary btn-lg btn-block">add </button><br><br>
+                 <button type="submit"  name="submit" value="Update Drug" class="btn btn-outline-primary btn-lg btn-block">add </button><br><br>
                
                  
             </fieldset>

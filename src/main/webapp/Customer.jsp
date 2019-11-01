@@ -158,7 +158,7 @@
         
         <!-- Form -->
                  
-                <form class="form-inline md-form mr-auto mb-4" action="/searchDrug">
+                <form class="form-inline md-form mr-auto mb-4" action="/searchDrugCm">
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
@@ -180,7 +180,7 @@
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
-              <a href="./examples/profile.html" class="dropdown-item">
+              <a href="/UserProfile" class="dropdown-item">
                 <i class="ni ni-single-02"></i>
                 <span>My profile</span>
               </a>

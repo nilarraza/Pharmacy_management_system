@@ -43,29 +43,56 @@ public class ApplicationController {
 	}
 	
 	@GetMapping("/PharShowPresDrug")
-	public String PharShowPresDrugs(HttpServletRequest req) {
+	public String PharShowPresDrugs(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
 		req.setAttribute("drugs",drugService.findAllPresDrugs());
+		java.lang.Object principal= authentication.getPrincipal();
+		
+		if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
+		
 		return "ShowDrugs.jsp";
 		
 	}
 	
 	@GetMapping("/PharShowNonPresDrug")
-	public String PharShowNonPresDrugs(HttpServletRequest req) {
-		req.setAttribute("drugs",drugService.findAllNonPresDrugs());
+	public String PharShowNonPresDrugs(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
+		req.setAttribute("drugsNon",drugService.findAllNonPresDrugs());
+		java.lang.Object principal= authentication.getPrincipal();
+		
+		if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
+		
 		return "ShowDrugs.jsp";
 		
 	}
 	
 	@GetMapping("/CustShowPresDrug")
-	public String CustShowPresDrugs(HttpServletRequest req) {
+	public String CustShowPresDrugs(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
 		req.setAttribute("drugs",drugService.findAllPresDrugs());
+		 java.lang.Object principal= authentication.getPrincipal();
+		
+		 if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
+		
 		return "Customer.jsp";
 		
 	}
 	
 	@GetMapping("/CustShowNonPresDrug")
-	public String CustShowNonPresDrugs(HttpServletRequest req) {
+	public String CustShowNonPresDrugs(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
 		req.setAttribute("drugs",drugService.findAllNonPresDrugs());
+		 java.lang.Object principal= authentication.getPrincipal();
+		 
+		 if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
 		return "Customer.jsp";
 		
 	}

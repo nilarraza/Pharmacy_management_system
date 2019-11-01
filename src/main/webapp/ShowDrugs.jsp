@@ -24,6 +24,11 @@
 	 <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Argon CSS -->
   <link type="text/css" href="css/argon.css?v=1.0.0" rel="stylesheet">
+   <script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
    
 </head>
 
@@ -64,7 +69,7 @@
             <div class=" dropdown-header noti-title">
               <h6 class="text-overflow m-0">Welcome!</h6>
             </div>
-            <a href="./examples/profile.html" class="dropdown-item">
+            <a href="/UserProfile.jsp" class="dropdown-item">
               <i class="ni ni-single-02"></i>
               <span>My profile</span>
             </a>
@@ -81,7 +86,7 @@
               <span>Support</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
+            <a href="/login" class="dropdown-item">
               <i class="ni ni-user-run"></i>
               <span>Logout</span>
             </a>
@@ -133,11 +138,7 @@
           </li>
          
          
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="./examples/tables.html">
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
@@ -161,7 +162,7 @@
         <!-- Brand -->
                  <!-- Form -->
                  
-                  <form class="form-inline md-form mr-auto mb-4" action="/searchDrug">
+                  <form class="form-inline md-form mr-auto mb-4" action="/searchDrugPm">
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
@@ -184,7 +185,7 @@
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
-              <a href="./examples/profile.html" class="dropdown-item">
+              <a href="/UserProfile" class="dropdown-item">
                 <i class="ni ni-single-02"></i>
                 <span>My profile</span>
               </a>
@@ -201,7 +202,7 @@
                 <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
+              <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -216,7 +217,7 @@
         <div class="header-body">
           </div>
     <!-- Page content -->
-          
+            <div>
           <table class="table table-striped">
 		<thead>
 			<tr>
@@ -227,6 +228,7 @@
 				<th>Availability</th>
 				<th>Image</th>
 				<th>Edit</th>
+				<th>Delete</th>
 				
 				
 				
@@ -243,12 +245,38 @@
 					<td>${drug.availability}</td>
 					<td><img src="./img/${drug.url}" style="height: 50; width: 60"></td>
 					<td><a href="/showUpdatePres?id=${drug.id}"><i class="fas fa-pencil-alt"></i></td>
+					<td><a href="/deletePresDrug?id=${drug.id}"><i class="fas fa-trash-alt"></i></i></td>
+									
 					
 				</tr>
 			</c:forEach>
+			
+			<c:forEach var="drugs" items="${drugsNon }">
+				<tr>
+					<td>${drugs.id}</td>
+					<td>${drugs.name}</td>
+					<td>${drugs.description}</td>
+					<td>${drugs.price}</td>
+					<td>${drugs.availability}</td>
+					<td><img src="./img/${drugs.url}" style="height: 50; width: 60"></td>
+					<td><a href="/showUpdateNonPres?id=${drugs.id}"><i class="fas fa-pencil-alt"></i></td>
+					<td><a href="/deleteNonPresDrug?id=${drug.id}"><i class="fas fa-trash-alt"></i></i></td>
+					
+					
+					
+				</tr>
+			</c:forEach>
+
 		</tbody>
 	</table>
-          
+        </div> 
+  
+        
+        
+
+		</tbody>
+	</table>
+        </div> 
           
     
         </div> 
