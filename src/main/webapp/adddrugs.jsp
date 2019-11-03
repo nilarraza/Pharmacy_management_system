@@ -122,24 +122,26 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/adddrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add Prescription Drugs
+              <i class="ni ni-tv-2 text-primary"></i> Add Prescription Drugs
             </a>
           </li>
           
                <li class="nav-item">
             <a class="nav-link" href="/addNonPresDrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add General Drugs
+              <i class="ni ni-tv-2 text-primary"></i> Add General Drugs
             </a>
           </li>
          
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
+         
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Orders
+            <a class="nav-link" href="/showOrders">
+              <i class="ni ni-bullet-list-67 text-red"></i> Orders From Cr
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/showDrOrders">
+              <i class="ni ni-bullet-list-67 text-red"></i> Orders From Dr
             </a>
           </li>
          
@@ -175,7 +177,7 @@
                   <img alt="Image placeholder" src="img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold text-dark">Jessica Jones</span>
+                  <span class="mb-0 text-sm  font-weight-bold text-dark"></span>
                 </div>
               </div>
             </a>
@@ -183,7 +185,7 @@
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
-              <a href="./examples/profile.html" class="dropdown-item">
+              <a href="/UserProfile" class="dropdown-item">
                 <i class="ni ni-single-02"></i>
                 <span>My profile</span>
               </a>
@@ -200,7 +202,7 @@
                 <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
+              <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>

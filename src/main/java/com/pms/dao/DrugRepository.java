@@ -11,6 +11,6 @@ import com.pms.model.PresDrugs;
 @Repository
 public interface DrugRepository extends CrudRepository<Drugs, Integer> {
 
-	ArrayList<PresDrugs> findByNameLike(String string);
+	ArrayList<Drugs> findByNameLike(String string);
 
 }

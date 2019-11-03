@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pms.dao.PersonRepository;
+import com.pms.dao.ProfileImgRepository;
 import com.pms.service.DrugService;
 import com.pms.service.PersonUserDetails;
 
@@ -23,6 +24,8 @@ public class ApplicationController {
 	DrugService drugService;
 	@Autowired
 	PersonRepository presonRepo;
+	@Autowired
+	ProfileImgRepository ProfileImgRepo;
 
 	@RequestMapping("/dashBoard")
 	public String userProcess() {
@@ -107,6 +110,7 @@ public class ApplicationController {
 			 String role = ((PersonUserDetails)principal).getPerson().role;
 			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
 			 modelmap.addAttribute("username",username );
+			
 			 
 			 System.out.println(role);
 			 
@@ -120,7 +124,7 @@ public class ApplicationController {
 		    	return "ShowDrugs.jsp";
 		         // redirect to indexProfesor.html page
 		    } else if(role.equals("doctor")){
-		    	return "dashBoard.jsp";
+		    	return "Doctor.jsp";
 		    }else {
 		    	System.out.println("Bad login");	
 		    	}

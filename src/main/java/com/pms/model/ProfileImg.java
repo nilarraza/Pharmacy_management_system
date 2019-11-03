@@ -9,6 +9,7 @@ public class ProfileImg {
 	@Id
 	public int id;
 	public String url;
+	
 	public int getId() {
 		return id;
 	}

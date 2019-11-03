@@ -17,25 +17,31 @@
 	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 	crossorigin="anonymous">
 	 <link rel="stylesheet" href="css/UserProfile.css" >
-
+	 <script>
+	 function standby() {
+    document.getElementById('foo').src = './ProfileImg/default.png'
+}
+	 </script>
 </head>
 <body>
+	<a href="/success" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
 		<div class="container">
 		<div class="d-flex justify-content-center h-100">
 			<div class="image_outer_container">
 				<div class="green_icon"></div>
 				<div class="image_inner_container">
 				<c:forEach var="profileimg" items="${img }">
-					<img src="./ProfileImg/${profileimg.url}">
+					<img src="./ProfileImg/${profileimg.url}" id ="foo" onerror="standby()">
 				</c:forEach>	
 				</div>
-				<h4>${username}</h4>
-				<h5>${email}</h5>
-				<h5>Contact No: ${contactno}</h5>				
-				<button type="button" class="btn btn-primary"><a  href="/editPharmasist" >Edit Profile</button>
+				<h4>${username}</h4><br>
+				<h6>${email}</h6><br>
+				<h6>Contact No: ${contactno}</h6><br>					
+				<button type="button" class="btn btn-primary"><a  href="/editPerson" >Edit Profile</button>
+				<br>	<br><br>
 		<form   class="form-register"  class="form-register col-10" method="post" action="addUserImg" enctype="multipart/form-data">
-						 <input type="file" name="img" class="form-control" placeholder="upload image"><br>  
-						   <button type="submit" name="submit" value="Add Drug" class="btn btn-primary">Upload Image</button><br><br>
+						 <input type="file" name="img" class="form-control" placeholder="upload image" required autofocus><br>  
+						   <button type="submit"  name="submit" value="Add Drug" class="btn btn-primary">Upload Image</button><br><br>
 		</form>		
 			</div>
 		</div>	

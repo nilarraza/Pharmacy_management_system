@@ -24,7 +24,7 @@
                     <input type="Date" name="dob" class="form-control" placeholder="Date of Birth" required autofocus><br>
 <!--                <input type="text" name="slmcNo" class="form-control" placeholder="SLMC Registration Number" required autofocus><br>-->
                     <input type="text" name="username" class="form-control" placeholder="Username" min="4" max="15"  title="please enter a valid Username" required autofocus><br>
-                    <input type="text"  name="password" class="form-control" placeholder="Password" minlength="6" required autofocus><br>                
+                    <input type="password"  name="password" class="form-control" placeholder="Password" minlength="6" required autofocus><br>                
                  
                  
                  <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Sign Up</button><br><br>

@@ -140,8 +140,13 @@
          
          
           <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Orders
+            <a class="nav-link" href="/showOrders">
+              <i class="ni ni-bullet-list-67 text-red"></i> Orders From Cr
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/showDrOrders">
+              <i class="ni ni-bullet-list-67 text-red"></i> Orders From Dr
             </a>
           </li>
          
@@ -193,14 +198,7 @@
                 <i class="ni ni-settings-gear-65"></i>
                 <span>Settings</span>
               </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
-              </a>
+            
               <div class="dropdown-divider"></div>
               <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>

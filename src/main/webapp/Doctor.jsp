@@ -128,16 +128,14 @@
             </a>
           </li>
           
+         
           <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
+            <a class="nav-link" href="/showOrdersDr">
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
             </a>
           </li>
+           
+          
          
         </ul>
         
@@ -162,6 +160,8 @@
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
+				
+				<a href="/uploadD" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">PlaceOrder</a>
  
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
@@ -197,7 +197,7 @@
                 <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
+              <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -235,7 +235,7 @@
 										<p class="card-text">${drug.description}</p>
 									</div>
 									<div class="card-footer" >
-										<button type="button" class="btn btn-primary">Shop Now <i class="fas fa-shopping-cart"></i></button>
+										<a href="/addtoCard?id=${drug.id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
 																				
 									</div>
 								</div>

@@ -1,44 +1,23 @@
 package com.pms.Controller;
 
-import java.awt.PageAttributes.MediaType;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Optional;
-
-import javax.persistence.criteria.Path;
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.pms.dao.NonPresDrugsRepository;
-
 import com.pms.dao.PresDrugsRepository;
-import com.pms.model.Customer;
-import com.pms.model.Drugs;
 import com.pms.model.NonPresDrugs;
 import com.pms.model.PresDrugs;
 import com.pms.service.DrugService;
-
-import antlr.collections.List;
 
 @Controller
 public class DrugsController {
@@ -56,11 +35,10 @@ public class DrugsController {
 
 		// PresDrugs one=new PresDrugs();
 
-		one.getName();		
+		one.getName();
 		one.getPrice();
 		one.getDescription();
 		one.getAvailability();
-	
 
 		String urlpath = saveImage(multipartfile);
 
@@ -68,21 +46,19 @@ public class DrugsController {
 
 		presdrugRepo.save(one);
 
-
 		return "/adddrugs.jsp";
-		
+
 	}
-	
+
 	@RequestMapping(value = "/addNonPresDrugs", method = RequestMethod.POST)
 	public String addDrugs(NonPresDrugs one, @RequestParam("drugimg") MultipartFile multipartfile) throws Exception {
 
 		// PresDrugs one=new PresDrugs();
 
-		one.getName();		
+		one.getName();
 		one.getPrice();
 		one.getDescription();
 		one.getAvailability();
-	
 
 		String urlpath = saveImage(multipartfile);
 
@@ -90,9 +66,8 @@ public class DrugsController {
 
 		nonpresdrugRepo.save(one);
 
-
 		return "/addNonPresDrugs.jsp";
-		
+
 	}
 
 	public String saveImage(@RequestParam("drugimg") MultipartFile multipartfile) throws Exception {
@@ -130,10 +105,9 @@ public class DrugsController {
 
 	@GetMapping("/showUpdatePres")
 	public String showUpdatePres(@RequestParam("id") int id, ModelMap modelmap) {
-			
-		
+
 		PresDrugs drug = presdrugRepo.findById(id).get();
-		
+
 //		 if(drug==null) {
 //			
 //				System.out.println(drugs.getName());
@@ -142,27 +116,23 @@ public class DrugsController {
 //			 return "editNonPresDrug.jsp";
 //	        
 //	    } else{
-	    	
+
 		System.out.println(drug.getName());
 		modelmap.addAttribute("drug", drug);
-	
+
 //	}
-		 return "editPresDrug.jsp";	 
+		return "editPresDrug.jsp";
 	}
-	
-	
 
 	@GetMapping("/showUpdateNonPres")
 	public String showUpdateNonPres(@RequestParam("id") int id, ModelMap modelmap) {
 		NonPresDrugs drug = nonpresdrugRepo.findById(id).get();
 		System.out.println(drug.getName());
 		modelmap.addAttribute("drug", drug);
-		
 
 		return "editNonPresDrug.jsp";
 
 	}
-
 
 	@RequestMapping(value = "/updatePresDrug", method = RequestMethod.POST)
 	public String updatePresDrug(PresDrugs one) {
@@ -171,7 +141,7 @@ public class DrugsController {
 		return "redirect:/PharShowPresDrug";
 
 	}
-	
+
 	@RequestMapping(value = "/updateNonPresDrug", method = RequestMethod.POST)
 	public String updateNonPresDrug(NonPresDrugs one) {
 
@@ -179,39 +149,39 @@ public class DrugsController {
 		return "redirect:/PharShowNonPresDrug";
 
 	}
-	
+
 	@RequestMapping("/deletePresDrug")
-	public String deletePresDrug(int id,ModelMap modelmap) {
+	public String deletePresDrug(int id, ModelMap modelmap) {
 		presdrugRepo.deleteById(id);
-		modelmap.addAttribute("msg","Succesfully deleted the Drug.");
+		modelmap.addAttribute("msg", "Succesfully deleted the Drug.");
 		return "redirect:/PharShowPresDrug";
 
 	}
-	
+
 	@RequestMapping("/deleteNonPresDrug")
-	public String deleteNonPresDrug(int id,ModelMap modelmap) {
+	public String deleteNonPresDrug(int id, ModelMap modelmap) {
 		nonpresdrugRepo.deleteById(id);
-		modelmap.addAttribute("msg","Succesfully deleted the Drug.");
+		modelmap.addAttribute("msg", "Succesfully deleted the Drug.");
 		return "redirect:/PharShowNonPresDrug";
 
 	}
-	
+
 	@RequestMapping("/searchDrugPm")
-	public String searchDrugPm(@RequestParam("search") String name,ModelMap modelmap) {
+	public String searchDrugPm(@RequestParam("search") String name, ModelMap modelmap) {
 		modelmap.addAttribute("drugs", drugService.findByName(name));
 		return "ShowDrugs.jsp";
 
 	}
-	
+
 	@RequestMapping("/searchDrugCm")
-	public String searchDrugCm(@RequestParam("search") String name,ModelMap modelmap) {
+	public String searchDrugCm(@RequestParam("search") String name, ModelMap modelmap) {
 		modelmap.addAttribute("drugs", drugService.findByName(name));
 		return "Customer.jsp";
 
 	}
-	
+
 	@RequestMapping("/searchDrugDr")
-	public String searchDrugDr(@RequestParam("search") String name,ModelMap modelmap) {
+	public String searchDrugDr(@RequestParam("search") String name, ModelMap modelmap) {
 		modelmap.addAttribute("drugs", drugService.findByName(name));
 		return "ShowDrugs.jsp";
 

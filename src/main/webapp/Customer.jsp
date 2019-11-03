@@ -64,7 +64,7 @@
             <div class=" dropdown-header noti-title">
               <h6 class="text-overflow m-0">Welcome!</h6>
             </div>
-            <a href="./examples/profile.html" class="dropdown-item">
+            <a href="/UserProfile" class="dropdown-item">
               <i class="ni ni-single-02"></i>
               <span>My profile</span>
             </a>
@@ -81,7 +81,7 @@
               <span>Support</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#!" class="dropdown-item">
+            <a href="/login" class="dropdown-item">
               <i class="ni ni-user-run"></i>
               <span>Logout</span>
             </a>
@@ -128,11 +128,7 @@
             </a>
           </li>
           
-          <li class="nav-item">
-            <a class="nav-link" href="./examples/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="./examples/tables.html">
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
@@ -162,6 +158,8 @@
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
+				
+				<a href="/uploadP" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">UploadPrescription</a>
  
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
@@ -188,9 +186,9 @@
                 <i class="ni ni-settings-gear-65"></i>
                 <span>Settings</span>
               </a>
-              <a href="./examples/profile.html" class="dropdown-item">
+              <a href="/Mycard" class="dropdown-item">
                 <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
+                <span>Wishlist</span>
               </a>
               <a href="./examples/profile.html" class="dropdown-item">
                 <i class="ni ni-support-16"></i>
@@ -219,30 +217,32 @@
 		
 		<div class="row">
 			<c:forEach var="drug" items="${drugs }">
+
 				
-					
-						
-							<div class="col-md-3 col-sm-4 sm-4">
-								<div class="card h-100">
-									<a href="#"><img class="card-img-top"
-										src="./img/${drug.url}" alt=""></a>
-									<div class="card-body">
-										<h4 class="card-title">
-											<a href="#">${drug.name}</a>
-										</h4>
-										<h5>Rs.${drug.price}</h5>
-										<h5>${drug.availability}</h5>
-										<p class="card-text">${drug.description}</p>
-									</div>
-									<div class="card-footer" >
-										<button type="button" class="btn btn-primary">Shop Now <i class="fas fa-shopping-cart"></i></button>
-																				
-									</div>
+
+						<div class="col-md-3 col-sm-4 sm-4">
+							<div class="card h-100">
+								<a href="#"><img class="card-img-top"
+									src="./img/${drug.url}" alt=""></a>
+								<div class="card-body">
+									<h4 class="card-title">
+										<a href="#" name="Pname">${drug.name}</a>
+									</h4>
+									<h5 name="price">${drug.price}</h5>
+									<h5>${drug.availability}</h5>
+									<p class="card-text">${drug.description}</p>
+								</div>
+								<div class="card-footer">
+									
+									<a href="/addtoCard?id=${drug.id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
+									
 								</div>
 							</div>
+						</div>
 						
-					
-				</c:forEach>
+
+
+					</c:forEach>
 				</div>
 		
 	

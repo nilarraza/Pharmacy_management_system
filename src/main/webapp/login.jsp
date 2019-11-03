@@ -35,6 +35,7 @@
         <span>${msg}</span>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button><br><br>
         <p>Do not have an Account? <a href="selectSignup.jsp"> Sign Up Now!</a></p>
+         <p>Forget MyPassword <a href="EnterUsername.jsp"> ForgetPassword</a></p>
         </fieldset>
       </form>
     
