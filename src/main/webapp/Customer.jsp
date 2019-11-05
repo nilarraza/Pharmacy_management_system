@@ -24,7 +24,9 @@
 	 <link href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <!-- Argon CSS -->
   <link type="text/css" href="css/argon.css?v=1.0.0" rel="stylesheet">
-   
+   <style>
+.mySlides {display:none;}
+</style>
 </head>
 
 <body>
@@ -130,7 +132,7 @@
           
           
           <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
+            <a class="nav-link" href="/showOrdersCr">
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
             </a>
           </li>
@@ -188,14 +190,14 @@
               </a>
               <a href="/Mycard" class="dropdown-item">
                 <i class="ni ni-calendar-grid-58"></i>
-                <span>Wishlist</span>
+                <span>Mycard</span>
               </a>
               <a href="./examples/profile.html" class="dropdown-item">
                 <i class="ni ni-support-16"></i>
                 <span>Support</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
+              <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -208,14 +210,38 @@
     <div class="header pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
         <div class="header-body">
+       
           </div>
           <br><br>
           
     <!-- Page content -->
           
-        
+         <div class="w3-content w3-section" style="width:700px; height:300px;">
+         
+        <c:forEach var="img" items="${img }">
+  <img class="mySlides" src="./img/${img.url}" style="width:100%; height:100%;">
+  	</c:forEach>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 		
 		<div class="row">
+		
 			<c:forEach var="drug" items="${drugs }">
 
 				
@@ -234,12 +260,12 @@
 								</div>
 								<div class="card-footer">
 									
-									<a href="/addtoCard?id=${drug.id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
+									<a href="/checkoutTotal?id=${drug.id}&price=${drug.price}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
 									
 								</div>
 							</div>
 						</div>
-						
+						<br><br>
 
 
 					</c:forEach>

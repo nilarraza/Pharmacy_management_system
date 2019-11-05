@@ -177,7 +177,8 @@ public class ProfileController {
 		email.sendEmail(mail, "reset Password", resetUrl);
 //		 System.out.println(User.role);
 
-		String msg = "Please click the reset link in your email. ";
+		
+		modelmap.addAttribute("msg","Please check the email for reset url.");
 		return "redirect:/login";
 	}
 

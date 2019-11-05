@@ -72,14 +72,7 @@
               <i class="ni ni-settings-gear-65"></i>
               <span>Settings</span>
             </a>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-calendar-grid-58"></i>
-              <span>Activity</span>
-            </a>
-            <a href="./examples/profile.html" class="dropdown-item">
-              <i class="ni ni-support-16"></i>
-              <span>Support</span>
-            </a>
+        
             <div class="dropdown-divider"></div>
             <a href="#!" class="dropdown-item">
               <i class="ni ni-user-run"></i>
@@ -118,12 +111,12 @@
         <!-- Navigation -->
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link" href="/CustShowNonPresDrug">
+            <a class="nav-link" href="DrShowNonPresDrug">
               <i class="fas fa-boxes"></i> General Drugs
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CustShowPresDrug">
+            <a class="nav-link" href="/DrShowPresDrug">
               <i class="fas fa-pills"></i> Prescription Drugs
             </a>
           </li>
@@ -188,14 +181,8 @@
                 <i class="ni ni-settings-gear-65"></i>
                 <span>Settings</span>
               </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
-              </a>
+          
+             
               <div class="dropdown-divider"></div>
               <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
@@ -235,7 +222,7 @@
 										<p class="card-text">${drug.description}</p>
 									</div>
 									<div class="card-footer" >
-										<a href="/addtoCard?id=${drug.id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
+										
 																				
 									</div>
 								</div>

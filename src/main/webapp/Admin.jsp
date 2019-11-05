@@ -145,8 +145,23 @@
         
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./examples/tables.html">
-              <i class="ni ni-bullet-list-67 text-red"></i> Orders
+            <a class="nav-link" href="/showOrdersAd">
+              <i class="ni ni-bullet-list-67 text-red"></i>Customer Orders 
+            </a>
+          </li>
+          
+         
+           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/showDrOrdersAd">
+              <i class="ni ni-bullet-list-67 text-red"></i>Doctoer Orders
+            </a>
+          </li>
+          
+             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/AddPromoAdmin.jsp">
+              <i class="ni ni-bullet-list-67 text-red"></i>Add Promo Code
             </a>
           </li>
          

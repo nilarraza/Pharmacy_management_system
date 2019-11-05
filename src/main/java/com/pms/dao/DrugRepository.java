@@ -13,4 +13,8 @@ public interface DrugRepository extends CrudRepository<Drugs, Integer> {
 
 	ArrayList<Drugs> findByNameLike(String string);
 
+	ArrayList<Drugs> findByPrice(String string);
+
+	ArrayList<Drugs> findAllById(int id);
+
 }

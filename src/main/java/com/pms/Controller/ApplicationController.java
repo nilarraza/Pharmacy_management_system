@@ -100,6 +100,34 @@ public class ApplicationController {
 		
 	}
 	
+
+	@GetMapping("/DrShowPresDrug")
+	public String DrShowPresDrug(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
+		req.setAttribute("drugs",drugService.findAllPresDrugs());
+		 java.lang.Object principal= authentication.getPrincipal();
+		
+		 if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
+		
+		return "Doctor.jsp";
+		
+	}
+	
+	@GetMapping("/DrShowNonPresDrug")
+	public String DrShowNonPresDrug(HttpServletRequest req,Authentication authentication,ModelMap modelmap) {
+		req.setAttribute("drugs",drugService.findAllNonPresDrugs());
+		 java.lang.Object principal= authentication.getPrincipal();
+		 
+		 if (principal instanceof UserDetails) {
+			 String username = ((PersonUserDetails)principal).getPerson().getUsername();
+			 modelmap.addAttribute("username",username );
+		 }
+		return "Doctor.jsp";
+		
+	}
+	
 	@GetMapping("/success")
 	public String successRoute(Authentication authentication,ModelMap modelmap) {
 		
@@ -115,7 +143,7 @@ public class ApplicationController {
 			 System.out.println(role);
 			 
 			 if(role.equals("customer")) {
-				 return "Customer.jsp";
+				 return "redirect:/showAdvertisement";
 		         // redirect to Customer.html page
 		    } else if(role.equals("admin")) {
 		    	return "Admin.jsp";

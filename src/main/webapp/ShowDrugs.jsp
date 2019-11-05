@@ -258,7 +258,7 @@
 					<td>${drugs.availability}</td>
 					<td><img src="./img/${drugs.url}" style="height: 50; width: 60"></td>
 					<td><a href="/showUpdateNonPres?id=${drugs.id}"><i class="fas fa-pencil-alt"></i></td>
-					<td><a href="/deleteNonPresDrug?id=${drug.id}"><i class="fas fa-trash-alt"></i></i></td>
+					<td><a href="/deleteNonPresDrug?id=${drugs.id}"><i class="fas fa-trash-alt"></i></i></td>
 					
 					
 					
