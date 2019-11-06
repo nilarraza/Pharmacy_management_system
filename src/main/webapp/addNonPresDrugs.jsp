@@ -122,13 +122,13 @@
           </li>
          <li class="nav-item">
             <a class="nav-link" href="/adddrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add Prescription Drugs
+             <i class="ni ni-tv-2 text-primary"></i> Add Prescription Drugs
             </a>
           </li>
           
                <li class="nav-item">
             <a class="nav-link" href="/addNonPresDrugs.jsp">
-              <i class="ni ni-planet text-blue"></i> Add General Drugs
+              <i class="ni ni-tv-2 text-primary"></i> Add General Drugs
             </a>
           </li>
          

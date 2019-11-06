@@ -136,6 +136,11 @@
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
             </a>
           </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/Feedback.jsp">
+              <i class="ni ni-bullet-list-67 text-red"></i> Feedback
+            </a>
+          </li>
          
         </ul>
         
@@ -216,11 +221,11 @@
           
     <!-- Page content -->
           
-         <div class="w3-content w3-section" style="width:700px; height:300px;">
+         <div class="w3-content w3-section" style="width:1400px; height:500px;">
          
         <c:forEach var="img" items="${img }">
-  <img class="mySlides" src="./img/${img.url}" style="width:100%; height:100%;">
-  	</c:forEach>
+ 	 	<img class="mySlides" src="./Promotion/${img.url}" style="width:100%; height:100%;">
+  		</c:forEach>
 </div>
 
 <script>
@@ -260,7 +265,7 @@ function carousel() {
 								</div>
 								<div class="card-footer">
 									
-									<a href="/checkoutTotal?id=${drug.id}&price=${drug.price}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AddtoWishlist</a>
+									<a href="/checkoutTotal?id=${drug.id}&price=${drug.price}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add To Card</a>
 									
 								</div>
 							</div>

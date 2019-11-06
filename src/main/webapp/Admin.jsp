@@ -126,21 +126,13 @@
             </a>
           </li>
           
-           <li class="nav-item">
-            <a class="nav-link" href="/custRegister.jsp">
-              <i class="ni ni-tv-2 text-primary"></i>Add Customers
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="/pharmRegister.jsp">
               <i class="ni ni-tv-2 text-primary"></i>Add Pharmasist
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/docRegister.jsp">
-              <i class="ni ni-tv-2 text-primary"></i> Add Doctors
-            </a>
-          </li>
+          
           
         
           </li>
@@ -157,11 +149,29 @@
               <i class="ni ni-bullet-list-67 text-red"></i>Doctoer Orders
             </a>
           </li>
-          
+    
              </li>
           <li class="nav-item">
             <a class="nav-link" href="/AddPromoAdmin.jsp">
               <i class="ni ni-bullet-list-67 text-red"></i>Add Promo Code
+            </a>
+          </li>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="/genReport">
+              <i class="ni ni-bullet-list-67 text-red"></i> Generate Report
+            </a>
+          </li>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="/AdminAddAdver.jsp">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Advertisement
+            </a>
+          </li>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="/ShowFeedback">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Feedback
             </a>
           </li>
          
