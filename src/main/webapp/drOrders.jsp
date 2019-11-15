@@ -134,6 +134,12 @@
               <i class="ni ni-bullet-list-67 text-red"></i> Orders
             </a>
           </li>
+          
+           <li class="nav-item">
+            <a class="nav-link" href="/chat">
+              <i class="far fa-comment-dots"></i></i> ChatBox
+            </a>
+          </li>
            
           
          

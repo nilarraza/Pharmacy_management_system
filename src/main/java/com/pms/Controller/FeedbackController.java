@@ -1,5 +1,8 @@
 package com.pms.Controller;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -40,8 +43,10 @@ public class FeedbackController {
 		feedback.setUser_id(userId);
 		//String txt=feedback.getFeedback();
 		
-		
-		
+		LocalDate date = LocalDate.now();
+		LocalTime time = LocalTime.now();
+		feedback.setDate(date);
+		feedback.setTime(time);
 		feedRepo.save(feedback);
 		
 		return "redirect:/success";

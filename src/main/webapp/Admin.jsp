@@ -174,6 +174,11 @@
               <i class="ni ni-bullet-list-67 text-red"></i>  Feedback
             </a>
           </li>
+                <li class="nav-item">
+            <a class="nav-link" href="/showSales">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Sales
+            </a>
+          </li>
          
         </ul>
         

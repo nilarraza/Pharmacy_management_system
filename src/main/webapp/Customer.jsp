@@ -124,11 +124,7 @@
               <i class="fas fa-boxes"></i> General Drugs
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/CustShowPresDrug">
-              <i class="fas fa-pills"></i> Prescription Drugs
-            </a>
-          </li>
+        
           
           
           <li class="nav-item">
@@ -139,6 +135,11 @@
          <li class="nav-item">
             <a class="nav-link" href="/Feedback.jsp">
               <i class="ni ni-bullet-list-67 text-red"></i> Feedback
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/chat">
+              <i class="far fa-comment-dots"></i></i> ChatBox
             </a>
           </li>
          

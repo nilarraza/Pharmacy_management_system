@@ -154,7 +154,7 @@ public class ApplicationController {
 		    } else if(role.equals("doctor")){
 		    	return "Doctor.jsp";
 		    }else {
-		    	System.out.println("Bad login");	
+		    	return "/login";	
 		    	}
 			 
 			 

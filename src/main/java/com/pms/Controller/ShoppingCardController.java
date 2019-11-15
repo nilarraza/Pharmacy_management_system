@@ -1,9 +1,9 @@
 package com.pms.Controller;
 
-import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Currency;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -26,7 +26,6 @@ import com.pms.model.Promotion;
 import com.pms.model.Sales;
 import com.pms.model.ShoppingCard;
 import com.pms.model.checkTotal;
-import com.pms.model.orderDetails;
 import com.pms.service.PersonUserDetails;
 import com.pms.service.PromotionService;
 import com.pms.service.ShoppingCardService;
@@ -152,9 +151,12 @@ public class ShoppingCardController {
 					int salePid=tot.getPid();
 					
 					Sales sale=new Sales();
+					LocalDate date = LocalDate.now();
+					LocalTime time = LocalTime.now();
 					sale.setPid(salePid);
 					sale.setPrice(saleprice);
-				
+					sale.setDate(date);
+					sale.setTime(time);
 					saleRepo.save(sale);
 
 				}
@@ -173,8 +175,12 @@ public class ShoppingCardController {
 						int salePid=tot.getPid();
 						
 						Sales sale=new Sales();
+						LocalDate date = LocalDate.now();
+						LocalTime time = LocalTime.now();
 						sale.setPid(salePid);
 						sale.setPrice(saleprice);
+						sale.setDate(date);
+						sale.setTime(time);
 					
 						saleRepo.save(sale);
 

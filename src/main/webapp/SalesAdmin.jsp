@@ -29,15 +29,15 @@
 
 <body>
   <!-- Sidenav -->
-  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg--white " id="sidenav-main">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
     <div class="container-fluid">
       <!-- Toggler -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="./Customer.jsp">
-        <img src="./img/medixlogo.png" class="navbar-brand-img" alt="... ">
+      <a class="navbar-brand pt-0" href="./index.html">
+        <img src="./img/medixlogo.png" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -72,7 +72,13 @@
               <i class="ni ni-settings-gear-65"></i>
               <span>Settings</span>
             </a>
-          
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-calendar-grid-58"></i>
+              <span>Activity</span>
+            </a>
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-support-16"></i>
+              <span>Support</span>
             </a>
             <div class="dropdown-divider"></div>
             <a href="#!" class="dropdown-item">
@@ -101,39 +107,76 @@
           </div>
         </div>
         <!-- Form -->
-        
-         <div class="form-group mb-0">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                 
-            </div>
-          </div>
        
         <!-- Navigation -->
-        <ul class="navbar-nav ">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/CustShowNonPresDrug">
-              <i class="fas fa-boxes"></i> General Drugs
+            <a class="nav-link" href="/listCustomers">
+              <i class="fas fa-users"></i>List Customers
             </a>
           </li>
-       
+          <li class="nav-item">
+            <a class="nav-link" href="/listPharmasist">
+              <i class="fas fa-user-tie"></i>List Pharmasist
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/listDoctors">
+              <i class="fas fa-user-md"></i> List Doctors
+            </a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/pharmRegister.jsp">
+              <i class="ni ni-tv-2 text-primary"></i>Add Pharmasist
+            </a>
+          </li>
+          
+          
+        
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/showOrdersAd">
+              <i class="ni ni-bullet-list-67 text-red"></i>Customer Orders 
+            </a>
+          </li>
           
          
+           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/showOrdersCr">
-              <i class="ni ni-bullet-list-67 text-red"></i> Orders
+            <a class="nav-link" href="/showDrOrdersAd">
+              <i class="ni ni-bullet-list-67 text-red"></i>Doctoer Orders
+            </a>
+          </li>
+    
+             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/AddPromoAdmin.jsp">
+              <i class="ni ni-bullet-list-67 text-red"></i>Add Promo Code
             </a>
           </li>
           
-           <li class="nav-item">
-            <a class="nav-link" href="/Feedback.jsp">
-              <i class="ni ni-bullet-list-67 text-red"></i> Feedback
+            <li class="nav-item">
+            <a class="nav-link" href="/genReport">
+              <i class="ni ni-bullet-list-67 text-red"></i> Generate Report
             </a>
           </li>
           
-           <li class="nav-item">
-            <a class="nav-link" href="/chat">
-              <i class="far fa-comment-dots"></i></i> ChatBox
+            <li class="nav-item">
+            <a class="nav-link" href="/AdminAddAdver.jsp">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Advertisement
+            </a>
+          </li>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="/ShowFeedback">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Feedback
+            </a>
+          </li>
+                <li class="nav-item">
+            <a class="nav-link" href="/showSales">
+              <i class="ni ni-bullet-list-67 text-red"></i>  Sales
             </a>
           </li>
          
@@ -152,17 +195,14 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        
-        
-        <!-- Form -->
+                 <!-- Form -->
                  
-                <form class="form-inline md-form mr-auto mb-4" action="/searchDrugCm">
+                  <form class="form-inline md-form mr-auto mb-4" action="/searchPerson">
   				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
   				<button class="btn btn-outline-warning btn-rounded btn-sm my-0" type="submit" value="search">Search</button>
 				</form>
-				
-				<a href="/uploadP" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">UploadPrescription</a>
- 
+               
+           
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
@@ -180,18 +220,7 @@
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
-              <a href="/UserProfile" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
-                <span>My profile</span>
-              </a>
-              <a href="./examples/profile.html" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
-                <span>Settings</span>
-              </a>
-              <a href="/Mycard" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>My Card</span>
-            
+             
               <div class="dropdown-divider"></div>
               <a href="/login" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
@@ -203,32 +232,49 @@
       </div>
     </nav>
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-md-8">
+    <div class="header  pb-8 pt-5 pt-md-8">
       <div class="container-fluid">
         <div class="header-body">
           </div>
-          <br><br>
-          
     <!-- Page content -->
-          
-         <form   class="form-register"  class="form-register col-10" method="post" action="uploadPresOrder" enctype="multipart/form-data">
-             <fieldset class="border p-2"> 
-                 
-                 <legend  class="w-auto"> Order Details</legend>
-                	
-                    <input type="text" class="form-control" placeholder="name" name="name"  required autofocus><br>                   
-                    <input type="text" name="ContactNo" class="form-control" placeholder="ContactNo" required autofocus><br>
-                     <input type="text" name="Address" class="form-control" placeholder="Delivery Address" required autofocus><br>                                       
-                     <input type="file" name="img" class="form-control" placeholder="upload image"><br>             
-                 
-                 
-                 <button type="submit" name="submit"  class="btn btn-primary">Place Order </button><br><br>
-               
-                 
-            </fieldset>
-         </form>
     
-		
+    <h3>${msg}</h3>
+    <br>
+    <hr>
+    
+     <table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Product Id</th>
+				<th>Price</th>
+				
+				
+				
+				
+
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="sale" items="${sales }">
+				<tr>
+					<td>${sale.id}</td>
+					<td>${sale.date}</td>
+					<td>${sale.time}</td>
+					<td>${sale.pid}</td>
+					<td>${sale.price}</td>
+			
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+          
+          
+          
+        
+          
           
     
         </div> 
